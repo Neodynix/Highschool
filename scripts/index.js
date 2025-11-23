@@ -1,4 +1,3 @@
-// scripts/index.js – Ultra-slick, responsive stats counter for homepage
 document.addEventListener('DOMContentLoaded', () => {
     const statsSection = document.querySelector('.stats-section');
     if (!statsSection) return;
