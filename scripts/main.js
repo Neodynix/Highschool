@@ -1,5 +1,3 @@
-// script.js – Main JavaScript (hamburger menu + close button)
-
 document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
