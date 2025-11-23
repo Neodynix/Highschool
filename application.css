@@ -1,0 +1,60 @@
+.app-card {
+    background: var(--white);
+    padding: 3rem; /* Default for larger screens */
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    border-top: 5px solid var(--accent);
+}
+
+/* ⬅️ FIX: Reduce padding for mobile screens */
+@media (max-width: 500px) {
+    .app-card {
+        padding: 2rem 1rem; /* Use less top/bottom padding, and much less side padding */
+        box-shadow: none; /* Optional: Hide heavy shadow on tiny screens for performance */
+    }
+}
+
+.app-card i {
+    font-size: 4rem; 
+    color: var(--primary); 
+    margin-bottom: 1rem;
+}
+
+.app-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    margin-top: 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover { 
+    background: var(--accent); 
+    color: var(--primary); 
+    transform: translateY(-2px);
+}
+
+.process-steps {
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--text);
+}
+
+.process-steps h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}

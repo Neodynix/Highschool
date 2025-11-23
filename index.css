@@ -1,0 +1,265 @@
+/* --- index.css – Enhanced & Fully Responsive Homepage Styles --- */
+
+:root {
+    --hero-height-mobile: 75vh;
+    --hero-height-desktop: 85vh;
+}
+
+/* --- HOMEPAGE HERO --- */
+.hero-home {
+    height: var(--hero-height-mobile);
+    min-height: 520px;
+    background: linear-gradient(rgba(15, 23, 42, 0.80), rgba(15, 23, 42, 0.80)), 
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect on desktop */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.hero-home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.9));
+    z-index: 1;
+}
+
+.hero-home > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-home h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.hero-home p {
+    font-size: 1.15rem;
+    max-width: 90%;
+    margin: 0 auto 2rem;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.hero-home .btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+}
+
+/* --- STATS SECTION --- */
+.stats-section {
+    background: var(--primary);
+    color: var(--white);
+    padding: 5rem 10%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-box {
+    will-change: transform;
+}
+
+.stat-box i {
+    font-size: 2.8rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.stat-box h3 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+    min-height: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-box p {
+    font-size: 1rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* --- EVENTS SECTION --- */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.event-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-left: 6px solid var(--accent);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.date-badge {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 0.6rem;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 72px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.3);
+}
+
+.date-badge .day {
+    display: block;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.date-badge .month {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.event-details h4 {
+    color: var(--primary);
+    margin-bottom: 0.4rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.event-details p {
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- RESPONSIVE REFINEMENTS --- */
+@media (min-width: 769px) {
+    .hero-home {
+        height: var(--hero-height-desktop);
+    }
+    .hero-home h1 {
+        font-size: 4.2rem;
+    }
+    .hero-home p {
+        font-size: 1.3rem;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-home {
+        background-attachment: scroll; /* Better performance on mobile */
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-home h1 {
+        font-size: 2.6rem;
+    }
+
+    .stats-section {
+        padding: 4rem 5%;
+    }
+
+    .stats-grid {
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-box h3 {
+        font-size: 2.3rem !important;
+    }
+
+    .stat-box i {
+        font-size: 2.4rem;
+    }
+
+    .event-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.8rem 1.2rem;
+    }
+
+    .date-badge {
+        min-width: 80px;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-home h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-home p {
+        font-size: 1.05rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .stat-box h3 {
+        font-size: 2.5rem !important;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Extra touch: subtle fade-in when stats enter viewport */
+.stats-section.appear {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

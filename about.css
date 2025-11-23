@@ -1,0 +1,26 @@
+/*
+ * ABOUT.CSS - Specific styles for the About page
+ * Requires main.css for global variables, header, footer, and .split-layout
+*/
+
+/* No unique styles needed here, as the split-layout is defined in main.css.
+   However, we can add a specific style for the content blocks if needed. */
+
+.text-block h3 { 
+    font-size: 1.8rem; 
+    margin-bottom: 1rem; 
+    color: var(--primary); 
+}
+
+.text-block p { 
+    margin-bottom: 1rem; 
+    color: var(--text); 
+}
+
+/* Ensure the image block looks slightly different or enhanced */
+.image-block {
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 10px;
+}
+

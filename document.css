@@ -1,0 +1,101 @@
+/*
+ * DOCUMENTS.CSS - Specific styles for the downloadable papers page
+ * Requires main.css for global variables and containers
+*/
+
+.document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.document-category h3 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.document-item {
+    background: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.document-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+}
+
+.file-info i {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-right: 1rem;
+}
+
+.file-title {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.file-metadata {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+.download-link {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.download-link i {
+    font-size: 1rem;
+    margin-right: 5px;
+    color: var(--white);
+}
+
+.download-link:hover {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+/* --- Admin Login Specific Style --- */
+.login-card {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.login-card .btn { width: 100%; }

@@ -1,0 +1,39 @@
+/*
+ * CONTACT.CSS - Specific styles for the Contact page
+ * Requires main.css for global variables, header, footer, and .split-layout
+*/
+
+.contact-info i { 
+    color: var(--accent); 
+    width: 25px;
+    margin-right: 5px; 
+}
+
+.contact-info p { 
+    margin-bottom: 1rem; 
+}
+
+/* Contact Form Styling */
+.form-group { 
+    margin-bottom: 1.5rem; 
+}
+
+.form-container input, 
+.form-container textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input:focus, 
+.form-container textarea:focus { 
+    border-color: var(--accent); 
+    box-shadow: 0 0 5px rgba(245, 158, 11, 0.5);
+}
+
+.form-container button {
+    width: 100%;
+}
