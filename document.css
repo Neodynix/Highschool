@@ -1,8 +1,3 @@
-/*
- * DOCUMENTS.CSS - Specific styles for the downloadable papers page
- * Requires main.css for global variables and containers
-*/
-
 .document-list {
     display: flex;
     flex-direction: column;
